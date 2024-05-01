@@ -1,12 +1,15 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    fontFamily: {
+      SolaimanLipi: ["SolaimanLipi"],
+    },
+    extend: {
+      colors: {
+        "primary-color": "#2B9E76",
+      },
+    },
   },
   plugins: [],
-}
-
+};
