@@ -1,9 +1,11 @@
+import Home from "../components/Home/Home";
 import Navbar from "../components/Navbar/Navbar";
 
 const MainLayout = () => {
     return (
-        <div className="border max-w-7xl mx-auto">
+        <div className="w-full mx-auto">
             <Navbar/>
+            <Home/>
         </div>
     );
 };
