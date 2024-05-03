@@ -20,7 +20,7 @@ const BookAndChapter = () => {
     console.log(activeBook);
   };
 
-  const handleChapterClick = (chapterId) => {
+  const handleChapterClick = (chapterId: number) => {
     const activeChapter = activeBook.chapters.find(
       (chapter) => chapter.id === chapterId
     );
@@ -98,7 +98,9 @@ const BookAndChapter = () => {
                   }`}
                 >
                   <div>
-                    <p className="border p-2">{chapter.id}</p>
+                    <p className="p-3 bg-gray-300 hover:bg-primary-color text-center rounded-lg text-white font-bold size-12">
+                      {chapter.id}
+                    </p>
                   </div>
                   <div>
                     <p>{chapter.title}</p>
