@@ -9,6 +9,7 @@ const Setting = () => {
   const handleToggle = () => {
     setIsChecked(!isChecked);
   };
+
   return (
     <div className="">
       <div className=" bg-white rounded-lg p-3">
@@ -17,7 +18,7 @@ const Setting = () => {
         <div>
           <p className="text-sm font-semibold">আরবি ফন্ট সিলেক্ট করুন</p>
           <select
-            className="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-3 pr-8 my-3 rounded-lg leading-tight focus:outline-none focus:border-gray-500"
+            className="block appearance-none w-full bg-white border border-gray-300 px-4 py-3 pr-8 my-3 rounded-lg leading-tight focus:outline-none"
             defaultValue=""
           >
             <option value="option1">KFGQ</option>
@@ -75,10 +76,10 @@ const Setting = () => {
                 />
                 <div className="block bg-gray-200 w-8 h-5 rounded-full"></div>
                 <div
-                  className={`dot absolute left-1 top-1 bg-white w-3 h-3 rounded-full transition ${
+                  className={`dot absolute left-1 top-1 w-3 h-3 rounded-full transition ${
                     isChecked
                       ? "transform translate-x-full bg-green-400"
-                      : "bg-gray-400"
+                      : "bg-white"
                   }`}
                 ></div>
               </div>
