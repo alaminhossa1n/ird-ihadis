@@ -1,10 +1,10 @@
 import { useState } from "react";
 
 const Setting = () => {
-  const [arabicValue, setArabicValue] = useState(33);
-  const [onubadValue, setOnubadValue] = useState(19);
+  const [arabicValue, setArabicValue] = useState<number>(33);
+  const [onubadValue, setOnubadValue] = useState<number>(19);
 
-  const [isChecked, setIsChecked] = useState(false);
+  const [isChecked, setIsChecked] = useState<boolean>(false);
 
   const handleToggle = () => {
     setIsChecked(!isChecked);
@@ -37,7 +37,7 @@ const Setting = () => {
               min="0"
               max="40"
               defaultValue={23}
-              onInput={(e) => setArabicValue(e.target.value)}
+              onChange={(e) => setArabicValue(parseInt(e.target.value))}
             />
             <span>{arabicValue}</span>
           </div>
@@ -52,7 +52,7 @@ const Setting = () => {
               min="0"
               max="25"
               defaultValue={19}
-              onInput={(e) => setOnubadValue(e.target.value)}
+              onChange={(e) => setOnubadValue(parseInt(e.target.value))}
             />
             <span>{onubadValue}</span>
           </div>
