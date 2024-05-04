@@ -30,7 +30,7 @@ const BookAndChapter = () => {
 
     if (selectedBook) {
       setActiveBook(selectedBook);
-      setActiveChapter(null); 
+      setActiveChapter(null);
     }
   };
 
@@ -92,7 +92,13 @@ const BookAndChapter = () => {
                 }`}
               >
                 <div>
-                  <p className="border p-2">{book.icon}</p>
+                  <p
+                    className={`p-3 bg-gray-300 hover:bg-primary-color text-center rounded-lg text-white font-bold size-12 ${
+                      activeBook?.id === book.id ? "bg-primary-color" : ""
+                    }`}
+                  >
+                    {book.icon}
+                  </p>
                 </div>
                 <div>
                   <p>{book.title}</p>
@@ -113,7 +119,11 @@ const BookAndChapter = () => {
                 }`}
               >
                 <div>
-                  <p className="p-3 bg-gray-300 hover:bg-primary-color text-center rounded-lg text-white font-bold size-12">
+                  <p
+                    className={`p-3 bg-gray-300 hover:bg-primary-color text-center rounded-lg text-white font-bold size-12 ${
+                      activeChapter?.id === chapter.id ? "bg-primary-color" : ""
+                    }`}
+                  >
                     {chapter.id}
                   </p>
                 </div>
